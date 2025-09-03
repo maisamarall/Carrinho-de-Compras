@@ -6,10 +6,10 @@ Este projeto implementa um sistema de carrinho de compras simples em PHP, seguin
 
 ---
 
-### 🧑‍🎓 Nomes e RAs
+### 🧑‍🎓 Nomes dos descentes e RAs
 
-- *Maisa Amaral 1:* 1997058
-- *Samara Adorno 2:* 2001639
+- *Maisa Amaral:* 1997058
+- *Samara Adorno:* 2001639
 
 ---
 
