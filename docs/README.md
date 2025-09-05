@@ -19,7 +19,7 @@ O projeto é dividido em uma estrutura de pastas simples:
 
 - src/ : Contém os arquivos de código-fonte.
     - Product.php: Classe que representa um produto, encapsulando seus atributos (ID, nome, preço, estoque).
-    -Stock.php: Classe responsável por gerenciar o controle de estoque de todos os produtos, desacoplando essa lógica da classe Product e ShoppingCart.
+    - Stock.php: Classe responsável por gerenciar o controle de estoque de todos os produtos, desacoplando essa lógica da classe Product e ShoppingCart.
     - ShoppingCart.php: Classe que gerencia o carrinho de compras. Contém os métodos para adicionar, remover, listar e calcular o total dos itens.
     - index.php: O arquivo principal para rodar os testes e demonstrar o funcionamento do sistema, agrupando as interações entre as classes.
 - README.md: Este arquivo, com a documentação do projeto.
