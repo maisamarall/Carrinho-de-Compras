@@ -1,16 +1,31 @@
 <?php
 
-require_once 'shoppingCart.php';
-$carrinhoDeCompras = new ShoppingCart();
+require_once 'Product.php';
+require_once 'Stock.php';
+require_once 'ShoppingCart.php';
 
-echo 'Simulação do Carrinho de Compras<br>';
+$products = [
+    new Product(1, 'Camiseta', 59.90, 10),
+    new Product(2, 'Calça Jeans', 129.90, 5),
+    new Product(3, 'Tênis', 199.90, 3)
+];
 
-echo '1. Adicionando 2 Camisetas (ID 1)<br>';
-$carrinhoDeCompras->addItem(1, 2);
-$carrinhoDeCompras->listItems();
-echo '<hr>';
+$stockManager = new Stock($products);
+$shoppingCart = new ShoppingCart($stockManager);
 
-echo '2. Tentando adicionar 10 Tênis (ID 3)<br>';
-$carrinhoDeCompras->addItem(3, 10);
-$carrinhoDeCompras->listItems();
-echo '<hr>';
+echo "Simulação do Carrinho de Compras<hr>";
+
+echo "Adicionando 2 Camisetas (ID 1)";
+echo $shoppingCart->addItem(1, 2);
+echo $shoppingCart->listItems();
+
+echo "Tentando adicionar 10 Tênis (ID 3)";
+echo $shoppingCart->addItem(3, 10);
+echo $shoppingCart->listItems();
+
+echo "Adicionando 1 Calça Jeans (ID 2) e aplicando cupom";
+echo $shoppingCart->addItem(2, 1);
+echo $shoppingCart->applyDiscount('DESCONTO10');
+echo $shoppingCart->listItems();
+
+?>
