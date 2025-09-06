@@ -18,11 +18,9 @@ Este projeto implementa um sistema de carrinho de compras simples em PHP, seguin
 O projeto é dividido em uma estrutura de pastas simples:
 
 - src/ : Contém os arquivos de código-fonte.
-    - Product.php: Classe que representa um produto, encapsulando seus atributos (ID, nome, preço, estoque).
-    - Stock.php: Classe responsável por gerenciar o controle de estoque de todos os produtos, desacoplando essa lógica da classe Product e ShoppingCart.
+    - Product.php: Classe que representa um produto, encapsulando seus atributos (ID, nome, preço, estoque) e a lógica para diminuir e aumentar o próprio estoque.
     - ShoppingCart.php: Classe que gerencia o carrinho de compras. Contém os métodos para adicionar, remover, listar e calcular o total dos itens.
-    - index.php: O arquivo principal para rodar os testes e demonstrar o funcionamento do sistema, agrupando as interações entre as classes.
-- README.md: Este arquivo, com a documentação do projeto.
+    - index.php: O arquivo principal para rodar os testes e demonstrar o funcionamento do sistema.
 
 ---
 
@@ -40,7 +38,7 @@ O sistema de carrinho de compras oferece as seguintes funcionalidades:
 ### 🛠️ Regras de Negócio e Limitações
 
 - O sistema gerencia o estoque dos produtos de forma que não é possível adicionar mais itens do que o disponível.
-- As operações de adicionar e remover itens atualizam o estoque do produto em tempo real, utilizando a lógica da classe Stock.
+- As operações de adicionar e remover itens atualizam o estoque do produto em tempo real.
 - As funcionalidades são implementadas usando arrays no arquivo Index.php
 - As funcionalidades são implementadas usando classes e objetos, e o princípio da separação de responsabilidades.
 
@@ -72,4 +70,4 @@ O arquivo index.php contém alguns testes que demonstram o funcionamento de toda
 
 *Caso 4 — Aplicação de cupom de desconto*
 - *Entrada:* $shoppingCart->applyDiscount('DESCONTO10')
-- *Resultado esperado:* O valor total da compra é reduzido em 10%.
+- *Resultado esperado:* O cupom "DESCONTO10

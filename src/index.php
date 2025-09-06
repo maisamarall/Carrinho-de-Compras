@@ -1,7 +1,6 @@
 <?php
 
 require_once 'Product.php';
-require_once 'Stock.php';
 require_once 'ShoppingCart.php';
 
 $products = [
@@ -10,8 +9,7 @@ $products = [
     new Product(3, 'Tênis', 199.90, 3)
 ];
 
-$stockManager = new Stock($products);
-$shoppingCart = new ShoppingCart($stockManager);
+$shoppingCart = new ShoppingCart($products);
 
 echo "Simulação do Carrinho de Compras<hr>";
 

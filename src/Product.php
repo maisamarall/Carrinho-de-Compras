@@ -34,4 +34,14 @@ class Product
     {
         return $this->stock;
     }
+
+    public function decrementStock(int $quantity): void
+    {
+        $this->stock -= $quantity;
+    }
+
+    public function incrementStock(int $quantity): void
+    {
+        $this->stock += $quantity;
+    }
 }
